@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="create_team-container">
+        <a href="{{ url_for('index') }}" class="home-button">На главную страницу</a>
         <h2>Создание команды</h2>
         <form method="POST" action="{{ url_for('create_team') }}" enctype="multipart/form-data">
             {{ form.csrf_token }}
