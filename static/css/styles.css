@@ -1,0 +1,253 @@
+/* styles.css */
+
+body {
+    background-image: url('/static/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+.index-container {
+    text-align: center;
+    color: white;
+}
+
+.index-header {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.index-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.index-icon {
+    margin: 10px;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.index-icon:hover {
+    color: #007bff;
+}
+
+
+.login-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.login-form-group {
+    margin-bottom: 20px;
+}
+label {
+    font-weight: bold;
+}
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.matches-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h2 {
+    text-align: center;
+    color: #333;
+}
+form {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+label {
+    font-weight: bold;
+    color: #333;
+}
+input[type="text"],
+input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.profile-container {
+    margin-top: 50px;
+    text-align: center;
+}
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+.profile-info {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавить тень */
+    max-width: 400px;
+    margin: 0 auto;
+}
+.profile-username {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.profile-form-container {
+    margin-top: 20px;
+}
+.profile-form-container form {
+    display: inline-block;
+}
+.profile-form-container form input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.profile-form-container form input[type="submit"]:hover {
+    background-color: #0069d9;
+}
+
+.register-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.register-form-group {
+    margin-bottom: 20px;
+}
+label {
+    font-weight: bold;
+}
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.create_team-container {
+    margin-top: 50px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+label {
+    font-weight: bold;
+}
+input, button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+input[type="file"] {
+    margin-bottom: 20px;
+}
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+input[type="text"][id="team_abbreviation"] {
+width: 200px; /* Adjust the width as needed */
+}
+
+
+.team_stats-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
+.team_stats-team-name {
+    font-weight: bold;
+}
+
+.team_stats-text-center {
+    text-align: center;
+}
