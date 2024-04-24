@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="register-container">
+        <a href="{{ url_for('index') }}" class="home-button">На главную страницу</a>
         <h1>Регистрация</h1>
         <form method="POST" action="{{ url_for('register') }}">
             {{ form.csrf_token }}
