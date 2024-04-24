@@ -5,69 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Профиль</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-image: url('{{ url_for('static', filename='images/background_profile.jpg') }}');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        .container {
-            margin-top: 50px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 36px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .profile-info {
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавить тень */
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        .username {
-            font-size: 24px;
-            font-weight: bold;
-            color: #007bff;
-            margin-bottom: 10px;
-        }
-        .avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-        .form-container {
-            margin-top: 20px;
-        }
-        .form-container form {
-            display: inline-block;
-        }
-        .form-container form input[type="submit"] {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .form-container form input[type="submit"]:hover {
-            background-color: #0069d9;
-        }
-    </style>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="profile-container">
         <h1>Профиль</h1>
         <div class="profile-info">
-            <p class="username">{{ username }}</p>
+            <p class="profile-username">{{ username }}</p>
         </div>
     </div>
 </body>
