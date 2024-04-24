@@ -251,3 +251,21 @@ th {
 .team_stats-text-center {
     text-align: center;
 }
+
+.home-button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #0056b3;
+}

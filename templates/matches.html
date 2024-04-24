@@ -6,6 +6,7 @@
 </head>
 <body>
     <div class="matches-container">
+        <a href="{{ url_for('index') }}" class="home-button">На главную страницу</a>
         <h2>Матчи</h2>
         <form method="POST" action="{{ url_for('matches') }}">
             <label for="opponent_name">Команда противника:</label>

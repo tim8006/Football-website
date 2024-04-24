@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="login-container">
+        <a href="{{ url_for('index') }}" class="home-button">На главную страницу</a>
         <h2>Вход</h2>
         <form method="POST" action="{{ url_for('login') }}">
             {{ form.csrf_token }}
