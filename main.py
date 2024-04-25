@@ -6,6 +6,7 @@ from flask_wtf import FlaskForm
 from werkzeug.utils import secure_filename
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Length, EqualTo
+from flask_wtf.file import FileField, FileAllowed
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -20,9 +21,10 @@ class RegistrationForm(FlaskForm):
 
 
 class LoginForm(FlaskForm):
-    username = StringField('Username', validators=[DataRequired(), Length(min=2, max=20)])
-    password = PasswordField('Password', validators=[DataRequired(), Length(min=6, max=20)])
-    submit = SubmitField('Login')
+    username = StringField('Имя пользователя', validators=[DataRequired(), Length(min=2, max=20)])
+    password = PasswordField('Пароль', validators=[DataRequired(), Length(min=6, max=30)])
+    avatar = FileField('Аватар', validators=[FileAllowed(['jpg', 'png'])])
+    submit = SubmitField('Войти')
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -107,6 +109,7 @@ def profile():
         if avatar_file:
             avatar_filename = secure_filename(avatar_file.filename)
             avatar_file.save(os.path.join(app.config['UPLOAD_FOLDER'], avatar_filename))
+            session['avatar'] = avatar_filename
 
     return render_template('profile.html', username=username, form=form)
 
