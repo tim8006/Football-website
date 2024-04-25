@@ -1,0 +1,5 @@
+Flask==2.0.1
+Flask-WTF==0.10.1
+Werkzeug==2.0.3
+WTForms==3.0.1
+Flask-WTF.file==0.2.1
