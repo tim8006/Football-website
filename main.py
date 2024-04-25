@@ -67,7 +67,7 @@ def create_team():
         coach_name = request.form['coach_name']
         team_name = request.form['team_name']
         team_abbreviation = request.form['team_abbreviation']
-        conn = sqlite3.connect('teams.db')
+        conn = sqlite3.connect('users.db')
         cursor = conn.cursor()
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS teams (
@@ -121,7 +121,7 @@ def matches():
             return redirect(url_for('matches'))
 
         team_score, opponent_score = map(int, score.split(':'))
-        conn = sqlite3.connect('matches.db')
+        conn = sqlite3.connect('users.db')
         cursor = conn.cursor()
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS matches (
@@ -145,7 +145,7 @@ def matches():
 
 @app.route('/team_stats')
 def team_stats():
-    conn = sqlite3.connect('matches.db')
+    conn = sqlite3.connect('users.db')
     cursor = conn.cursor()
     cursor.execute('SELECT * FROM matches')
     matches = cursor.fetchall()
