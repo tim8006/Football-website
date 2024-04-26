@@ -9,9 +9,25 @@
 </head>
 <body>
     <div class="profile-container">
-        <h1>Профиль</h1>
+        <a href="{{ url_for('index') }}" class="home-button">На главную страницу</a>
         <div class="profile-info">
-            <p class="profile-username">{{ username }}</p>
+            <div class="profile-avatar-frame">
+                {% if session['avatar'] %}
+                    <img src="{{ url_for('static', filename='images/' ~ session['avatar']) }}" alt="Аватар">
+                {% endif %}
+            </div>
+            <div class="profile-name">
+                <h1>Профиль</h1>
+                <p class="profile-username">{{ username }}</p>
+            </div>
+            <form action="{{ url_for('profile') }}" method="POST" enctype="multipart/form-data">
+                {{ form.csrf_token }}
+                <div class="form-group">
+                    <label for="avatar">Загрузить аватар:</label>
+                    {{ form.avatar(class="form-control-file") }}
+                </div>
+                <button type="submit" class="btn btn-primary">Загрузить</button>
+            </form>
         </div>
     </div>
 </body>
